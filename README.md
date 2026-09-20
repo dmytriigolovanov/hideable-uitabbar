@@ -5,6 +5,7 @@
 ## Requirements
 
 * **iOS 15.0**
+* **Swift 5.5**
 
 ## Installation
 
