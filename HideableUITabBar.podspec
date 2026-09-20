@@ -9,7 +9,7 @@ The library provides the ability to hide UITabBar with animation.
 
   s.homepage         = 'https://github.com/dmytriigolovanov/hideable-uitabbar'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Dmytrii Golovanov' => 'dmyrii.golovanov@google.com' }
+  s.author           = { 'Dmytrii Golovanov' => 'dmyrii.golovanov@gmail.com' }
 
   s.source           = {
     :git => 'https://github.com/dmytriigolovanov/hideable-uitabbar.git',
