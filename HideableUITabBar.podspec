@@ -21,7 +21,7 @@ The library provides the ability to hide UITabBar with animation.
     "CHANGELOG.md"
   ]
 
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "15.0"
 
   s.swift_version = "5.0"
 

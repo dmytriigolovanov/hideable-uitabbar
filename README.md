@@ -4,7 +4,7 @@
 
 ## Requirements
 
-* **iOS 11.0+**
+* **iOS 15.0**
 
 ## Installation
 
