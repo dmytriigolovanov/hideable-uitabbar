@@ -1,5 +1,7 @@
 # Hideable UITabBar
 
+> **Deprecation notice**: As of iOS 18, `UITabBarController` natively supports hiding/showing its tab bar with animation via `setTabBarHidden(_:animated:)` and `isTabBarHidden`. This library is soft-deprecated and will eventually be archived — please migrate to the system API once your minimum deployment target reaches iOS 18. All symbols in this library have been prefixed with `hd_` (e.g. `hd_setTabBarHidden(_:animated:)`) to avoid colliding with Apple's native members of the same name.
+
 ## Requirements
 
 * **iOS 11.0+**
@@ -43,28 +45,33 @@ Import library to needed swift file.
 import HideableTabBar
 ```
 
-Call `setTabBarHidden(_:,animated:)` func to hide / show UITabBar.
+Call `hd_setTabBarHidden(_:animated:)` func to hide / show UITabBar.
 ```swift
 let tabBarController = UITabBarController()
 
 // hide tabbar
-tabBarController.setTabBarHidden(true, animated: true)
+tabBarController.hd_setTabBarHidden(true, animated: true)
 
 // show tabbar
-tabBarController.setTabBarHidden(false, animated: true)
+tabBarController.hd_setTabBarHidden(false, animated: true)
 ```
 
-Library provides ability to execute additional animation by subclassing `UITabBarController` and override `tabBarHideShowAdditionalAnimations(hidden:)` func.
+Library provides ability to execute additional animation by subclassing `UITabBarController` and override `hd_tabBarHideShowAdditionalAnimations(hidden:)` func.
 **RECOMMENDATION**: This functionality can be used to animate additional UI elements, for exmaple such call button. 
 ```swift
 class TabBarController: UITabBarController {
-    override func tabBarHideShowAdditionalAnimations(hidden: Bool) {
-        super.tabBarHideShowAdditionalAnimations(hidden: hidden)
+    override func hd_tabBarHideShowAdditionalAnimations(hidden: Bool) {
+        super.hd_tabBarHideShowAdditionalAnimations(hidden: hidden)
         
         // additional animation
     }
 }
 ```
+
+> On iOS 18+, prefer the system API instead:
+> ```swift
+> tabBarController.setTabBarHidden(true, animated: true)
+> ```
 
 ## License
 

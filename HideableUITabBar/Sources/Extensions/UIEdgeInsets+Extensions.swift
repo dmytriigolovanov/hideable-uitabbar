@@ -6,9 +6,9 @@
 
 import UIKit
 
-public func - (lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> UIEdgeInsets {
+func - (lhs: UIEdgeInsets, rhs: UIEdgeInsets) -> UIEdgeInsets {
     return UIEdgeInsets(top: lhs.top - rhs.top,
-                        left: lhs.left - rhs.left,
-                        bottom: lhs.bottom - rhs.bottom,
-                        right: lhs.right - rhs.right)
+                         left: lhs.left - rhs.left,
+                         bottom: lhs.bottom - rhs.bottom,
+                         right: lhs.right - rhs.right)
 }
